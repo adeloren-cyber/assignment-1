@@ -31,6 +31,8 @@ const questionElement = document.getElementById("question");
 const optionsElements = document.querySelectorAll(".option");
 const nextButton = document.getElementById("next-button");
 
+
+
 function loadQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
   questionElement.textContent = currentQuestion.question;
@@ -75,5 +77,7 @@ function showScore() {
   optionsElements.forEach(button => (button.style.display = "none"));
   nextButton.style.display = "none";
 }
+
+document.getElementById("next-button").addEventListener("click", nextQuestion);
 
 loadQuestion();
